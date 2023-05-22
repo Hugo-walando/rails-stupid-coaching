@@ -1,0 +1,28 @@
+
+<div class="container mt-3">
+  <div class="bg-info rounded-3">
+    <h1 class="text-center"> <%= @answer %></h1>
+    <h2 class="text-center font-italic">---You---</h2>
+</div>
+
+
+
+  <div class="bg-warning border border-secondary rounded-3">
+    <h1 class="text-center">
+    <% if @answer == "I am going to work" %>
+    <%= "Great!" %>
+
+    <% elsif @answer.include?("?") %>
+    <%= " Silly question, get dressed and go to work!" %>
+
+    <% else  %>
+    <%= "I don't care, get dressed and go to work!" %>
+    <% end %>
+
+
+    </h1>
+    <h2 class="text-center font-italic">---Your coach---</h2>
+  </div>
+
+  <%= link_to "Back", ask_path %>
+</div>
